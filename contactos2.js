@@ -54,3 +54,21 @@ function borrarContacto(id) {
 }
 
 //borrarContacto(02);
+
+//actualizar contacto
+function actualizarContacto(id, datosActualizados) {
+  var contacto = contactos.find((c) => c.id === id);
+
+  if (contacto) {
+    Object.assign(contacto, datosActualizados);
+  }
+}
+
+actualizarContacto(01, {
+  id: 04,
+  Nombre: "HELLO",
+  Apellidos: " Moreno",
+  Telefono: 35905094,
+  Ubicacion: { ciudad: "pasto", direccion: "mz2 cs4 pucalpa3" },
+});
+console.log(contactos);
